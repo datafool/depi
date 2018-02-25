@@ -1,0 +1,3 @@
+Repository contains code and python notebook for AI-ON initiative on "Discovering the manifold of Psychiatric disorders using deep generative models"
+- As of now a visualization module has been added which can be used to visualize all the three views of brain MRI, for upto 4 MRI images. 
+- Visualization is interactive and hence we can view different slices by pressing appropriate keys, more details in "visualize_data.ipynb"
