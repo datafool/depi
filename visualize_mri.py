@@ -58,7 +58,7 @@ class VisualizeMRI:
                 ax_current.imshow(image_slice,  aspect='auto')
                 ax_current.set_xticks([])
                 ax_current.set_yticks([])
-                ax_current.set_title("image {} {}".format(i + 1, image_mapper[k]))
+                ax_current.set_title("img{}: {}".format(i + 1, image_mapper[k]))
                 
                 
             fig.canvas.mpl_connect('key_press_event', self.process_key) 
