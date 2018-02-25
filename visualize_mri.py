@@ -38,6 +38,7 @@ class VisualizeMRI:
                     keys.remove(key)
                     
     def multi_slice_viwer(self):
+        image_mapper = {0: 'saggital', 1:'coronal', 2: 'transverse'}
         fig, ax = plt.subplots(ncols=3, 
                                nrows=len(self.image_list), 
                                figsize=self.fig_size[len(self.image_list) - 1],
@@ -57,7 +58,7 @@ class VisualizeMRI:
                 ax_current.imshow(image_slice,  aspect='auto')
                 ax_current.set_xticks([])
                 ax_current.set_yticks([])
-                ax_current.set_title("image {} angle {}".format(i + 1, k + 1))
+                ax_current.set_title("image {} {}".format(i + 1, image_mapper[k]))
                 
                 
             fig.canvas.mpl_connect('key_press_event', self.process_key) 
