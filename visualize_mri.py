@@ -55,7 +55,7 @@ class VisualizeMRI:
                 ax_current.index = image.shape[k]//2
                 # ax_current.index = 0
                 image_slice = image.take(indices=ax_current.index, axis=k)
-                ax_current.imshow(image_slice,  aspect='auto')
+                ax_current.imshow(image_slice,  aspect='auto', cmap='gray')
                 ax_current.set_xticks([])
                 ax_current.set_yticks([])
                 ax_current.set_title("img{}: {}".format(i + 1, image_mapper[k]))
